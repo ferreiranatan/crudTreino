@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de Clientes</h1>
+    </header>
+    <main>
+        
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal-form" aria-label="Open" id="cadastrarCliente">cadastrar</button>
+        <table id="tableClient" class="table bg-primary mt-3">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>email</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Açao</th>
+                </tr>
+            </thead>
+            <tbody id="bodyc">
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal2">
+            <div class="modal content">
+                <header class="modal-header">
+                    <h2>Excluir Cliente</h2>
+                    <span class="modal-close" id="modalClose2">&#10006;</span>
+                </header>
+                <div id="avisoDelete">
+                    <!--aviso delete -->
+                </div>
+                <footer class="modal-footer">
+                    <button id="apagar" class="button red">Apagar</button>
+                    <button id="cancelar2" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Modal criar e editar-->
+        <div class="modal" id="modal">
+            <div class="modal content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do cliente" required>
+                    <input type="email" id="email" class="modal-field" placeholder="e-mail do cliente" required>
+                    <input type="text" id="celular" class="modal-field" placeholder="celular do cliente" required>
+                    <input type="text" id="cidade" class="modal-field" placeholder="cidade do cliente" required>
+                </form>
+                <footer>
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar2" class="button blue">Cancelar</button>
+                </footer>
+                
+            </div>
+        </div>
+    </main>
+    
+    <script src="main.js"></script>
+</body>
+</html>
